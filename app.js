@@ -9,6 +9,6 @@ console.log('Will be sending first request in ' + (parseInt(process.argv[3]) / 1
 
 setInterval(function () {
     request(process.argv[2], function (error, response, body) {
-        console.log(body);
+        console.log(Date.now(), body);
     });
 }, process.argv[3]);
